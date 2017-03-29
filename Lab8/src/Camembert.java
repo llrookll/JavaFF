@@ -3,7 +3,6 @@ class RunnyStack<Base> {
     private int depth = 0;
 
     public RunnyStack() {
-
     }
 
     public int depth() {
