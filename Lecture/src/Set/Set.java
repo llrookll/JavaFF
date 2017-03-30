@@ -1,8 +1,6 @@
-package ArrayManipulation;
+package Set;
 
-/**
- * Created by Gas on 3/8/2017.
- */
+// Set class with double Array
 public class Set<Key, Value>{
     private Key[] keys;
     private Value[] values;

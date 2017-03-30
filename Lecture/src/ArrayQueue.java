@@ -11,7 +11,7 @@ public class ArrayQueue<Base> {
     }
 
     public boolean isFull() {
-        return front == (rear + 1) % objects.length
+        return front == (rear + 1) % objects.length;
     }
 
     public void enqueue(Base object) {
