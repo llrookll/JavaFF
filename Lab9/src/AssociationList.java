@@ -74,6 +74,7 @@ class Hogwarts
         list.put("Albus", "Gellert");
         list.put(null,    null);
 
+
         System.out.println(list.isIn(null));         //  true          2 points.
         System.out.println(list.get("Albus"));       //  Gellert       2 points.
         System.out.println(list.get("Ron"));         //  Hermione      2 points.
