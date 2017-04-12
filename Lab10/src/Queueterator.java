@@ -87,6 +87,7 @@ class ArrayQueue<Base>
     }
     public Iterator iterator(){
         Iterator a = new Iterator(objects);
+        return a;
     }
 }
 
