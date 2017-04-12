@@ -4,22 +4,41 @@
 public class AssociationList<Key, Value> {
     private Node node;
 
-    public AssociationList(){}
-    public Value get(Key key){
-
+    public AssociationList() {
     }
-    private boolean isEqual(Key leftKey, Key rightKey){
+
+    public Value get(Key key) {
+        boolean foundkey = false;
+        while (!foundkey) {
+            if (key == node.key) {
+                foundkey = true;
+                return node.value;
+            } else {
+                node = node.next;
+            }
+        }
+        throw new IllegalArgumentException("ERROR");
+    }
+
+    private boolean isEqual(Key leftKey, Key rightKey) {
         return leftKey == rightKey;
     }
 
     public void put(Key key, Value value) {
-        if (node== null) node = new Node(key,value,node);
+        if (node == null) node = new Node(key, value, node);
         else if (node.key.equals(key)) node.value = value;
-        else node = new Node(key,value,node);
+        else node = new Node(key, value, node);
     }
 
     public boolean isIn(Key k) {
-        return false;
+        while (node.key != k) {
+            try {
+                node = node.next;
+            } catch (Exception i) {
+                break;
+            }
+        }
+        return true;
     }
 
     private class Node {
@@ -35,10 +54,7 @@ public class AssociationList<Key, Value> {
     }
 }
 
-class Hogwarts
-{
-
-//  MAIN. Make an instance of ASSOCIATION LIST and test it.
+class main{
 
     public static void main(String [] args)
     {
